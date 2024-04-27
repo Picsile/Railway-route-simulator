@@ -1,0 +1,122 @@
+:root {
+    --greenColor: rgb(0, 203, 0);
+    --greenYellow: rgb(255, 204, 0);
+    --bg: rgb(46, 46, 46);
+    --bgSimulation: rgb(38, 38, 38);
+    --borderSimulation: rgb(80, 80, 80);
+}
+
+body {
+    background-color: var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.container {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.simulation {
+    background-color: var(--bgSimulation);
+    border: 3px solid var(--borderSimulation);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+
+#train{
+    margin-bottom: -30px;
+    transition: 1s ease-in-out;
+}
+
+
+#road {
+    display: flex;
+    align-items: center;
+    margin: 0 125px;
+}
+
+
+.line {
+    width: 500px;
+    height: 10px;
+
+    background-position: 50%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="3px" height="3px" viewBox="0 0 3 3" fill="white"><polygon points="0,0.5 0,1.5 1.5,3 2.5,3"></polygon><polygon points="2.5,0 1.5,0 3,1.5 3,0.5"></polygon></svg>');
+    background-size: 6px 6px;
+}
+
+.lineGreen {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="3px" height="3px" viewBox="0 0 3 3" fill="rgb(0, 203, 0)"><polygon points="0,0.5 0,1.5 1.5,3 2.5,3"></polygon><polygon points="2.5,0 1.5,0 3,1.5 3,0.5"></polygon></svg>');
+}
+
+.lineYellow {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="3px" height="3px" viewBox="0 0 3 3" fill="rgb(255, 204, 0)"><polygon points="0,0.5 0,1.5 1.5,3 2.5,3"></polygon><polygon points="2.5,0 1.5,0 3,1.5 3,0.5"></polygon></svg>');
+}
+
+
+.circle1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    margin: 0 8px;
+}
+
+.circle1Green{
+    background-color: var(--greenColor);
+}
+
+.circle1Yellow{
+    background-color: var(--greenYellow);
+}
+
+.circle2 {
+    width: 29px;
+    height: 29px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+#time {
+    position: relative;
+    height: 110px;
+    margin-left: 125px;
+}
+
+.time {
+    position: absolute;
+    top: 20px;
+
+    width: 100px;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: rgb(0, 203, 0);
+}
